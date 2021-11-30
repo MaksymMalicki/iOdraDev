@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils.text import slugify
 from django.urls import reverse
+import math
 
 class Chunk(models.Model):
     part = models.CharField(max_length=100)
