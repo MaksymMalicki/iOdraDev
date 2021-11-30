@@ -11,10 +11,10 @@
 //     console.log()
 //   }, 1000);
 // })
-$("html").click(function(e){
-    var parentOffset = $(this).offset(); 
-    var relX = e.pageX - parentOffset.left;
-    var relY = e.pageY - parentOffset.top;
-    var res = relX.toString() + " " + relY.toString()
-    window.alert(res);
- });
+// $("html").click(function(e){
+//     var parentOffset = $(this).offset(); 
+//     var relX = e.pageX - parentOffset.left;
+//     var relY = e.pageY - parentOffset.top;
+//     var res = relX.toString() + " " + relY.toString()
+//     window.alert(res);
+//  });
