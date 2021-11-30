@@ -1,0 +1,67 @@
+.header, .table-div h1{
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  font-family: Bahnschrift;
+  margin-top: 50px;
+}
+
+.table-div{
+  width: 1000px;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+.table-div h1{
+  text-align: left;
+}
+
+table{
+  font-family: Roboto;
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  border-collapse: collapse;
+  margin-bottom: 100px;
+}
+
+td, th{
+  border: solid 2px #b4c5d5;
+  padding: 20px;
+}
+
+.left{
+  border-left: none;
+}
+
+.top{
+  border-top: none;
+}
+
+.right{
+  border-right: none;
+}
+
+.bottom{
+  border-bottom:none;
+}
+
+.name{
+  width: 300px;
+  font-size: 30px
+}
+
+.kilometer{
+  width: 300px;
+  font-size: 23px;
+}
+
+.phone{
+  width: 300px;
+  font-size: 30px;
+}
+
+.state{
+  width: 300px;
+  font-size: 23px;
+}

@@ -1,0 +1,241 @@
+@font-face {
+  font-family: Roboto;
+  src: url('roboto.ttf');
+}
+
+@font-face{
+font-family: Raleway;
+src: url('raleway.ttf');
+}
+
+body{
+    margin: 0;
+}
+
+.outter{
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500%;
+  height: 100%;
+  animation: animate 20s linear infinite;
+}
+
+.slider .slide {
+  position: relative;
+  width: 20%;
+  height: 100%;
+  float: left;
+}
+
+@keyframes animate {
+  0% {
+      left: 0;
+  }
+  20% {
+      left: 0;
+  }
+  25% {
+      left: -100%;
+  }
+  45% {
+      left: -100%;
+  }
+  50% {
+      left: -200%;
+  }
+  70% {
+      left: -200%;
+  }
+  75% {
+      left: -300%;
+  }
+  95% {
+      left: -300%;
+  }
+  100% {
+      left: -400%;
+  }
+}
+
+.slide.slide1 {
+  background-image: url("landing_background_images/landing_img_1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.slide.slide2 {
+  background-image: url("landing_background_images/landing_img_2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.slide.slide3 {
+  background-image: url("landing_background_images/landing_img_3.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.slide.slide4 {
+  background-image: url("landing_background_images/landing_img_4.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hello-container{
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(3px);
+  width: 1000px;
+  border-radius: 100px;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hello-container p{
+  font-family: Bahnschrift;
+  color: #023E73;
+  font-size: 51px;
+  font-weight: bold;
+  width: 600px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.app_logo{
+  width: 400px;
+  margin-left: 300px;
+}
+
+.hello-container h3{
+  font-family: Bahnschrift;
+  color: #023E73;
+  font-size: 143px;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.blur>*{
+  opacity: 0.5;
+}
+
+.non-blur{
+  opacity: 1;
+}
+
+.more{
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.more img{
+  width: 70px;
+  height: 57px;
+}
+
+.more p{
+  color: #023E73;
+  text-align: center;
+  font-family: Bahnschrift;
+  font-size: 67px;
+  margin: 15px 0;
+}
+
+.to{
+  text-decoration: none;
+}
+
+.website-href-container{
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(3px);
+  width: 1000px;
+  border-radius: 100px;
+  position: absolute;
+  top: 550px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  padding: 20px 0;
+  cursor: pointer;
+}
+
+.website-href-container img{
+  width: 200px;
+  height: 108px;
+}
+
+.website-href-container p{
+  color: #023E73;
+  text-align: center;
+  font-family: Bahnschrift;
+  font-size: 30px;
+  margin: 15px 0;
+  margin-left: 50px;
+}
+
+.website-href-container span{
+  color: #023E73;
+  text-align: center;
+  font-family: Bahnschrift;
+  font-size: 45px;
+  margin: 15px 0;
+  margin-top: 10px;
+}
+
+.footer{
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  background-color: white;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+
+.wroclaw-logo{
+  width: 71px;
+  height: 70px;
+  background-color: yellow;
+  margin-left: 30px;
+}
+
+.description, .website{
+  font-size: 20px;
+  font-family: Bahnschrift;
+  width: 260px;
+  margin-left: 100px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.odra-centrum-logo{
+  margin-left: 600px;
+  width: 100px;
+  height: 50px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}

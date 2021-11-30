@@ -1,0 +1,63 @@
+body{
+  margin: 0;
+}
+
+.container{
+  width: 65%;
+  margin-left: 100px;
+}
+
+.komunikaty-title{
+  font-size: 30px;
+  font-family: Bahnschrift;
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.title-div{
+  width: 70%;
+  float: left;
+  height: 30px;
+  margin: 1.5em 0;
+}
+
+.date-div{
+  width: 30%;
+  float: right;
+  height: 30px;
+  margin: 1.5em 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.title{
+  font-size: 25px;
+  font-family: Roboto;
+  color: white;
+  font-weight: bold;
+  text-align: left;
+  margin: 0;
+}
+
+.date{
+  font-size: 20px;
+  font-family: Roboto;
+  color: white;
+  text-align: right;
+  margin: 0;
+}
+
+.text{
+  font-size: 20px;
+  font-family: Roboto;
+  color: white;
+}
+
+.divider{
+  width: 100%;
+  height: 9px;
+  background-color: #7492ad;
+  border-radius: 25px;
+}

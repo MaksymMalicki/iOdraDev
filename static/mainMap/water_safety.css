@@ -1,0 +1,30 @@
+.header{
+  font-family: Bahnschrift;
+  font-size: 30px;
+  margin-top: 50px;
+  text-align: center;
+  color: white;
+}
+
+.carousel{
+  width: 800px;
+  position: relative;
+  left: 550px;
+  top: 120px;
+}
+
+.glyphicon{
+  width: 60px;
+  height: 60px;
+}
+
+.carousel-control.left{
+  background-image: url('');
+  left: 320px;
+}
+
+.carousel-control.right{
+  background-image: url('');
+  right: 350px;
+
+}

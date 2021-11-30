@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'contactApp/contact.css'%}">
+<h1 class="contact-title">Punkt Odrzańskiej Informacji Turystycznej</h1>
+
+{% for block, info in data %}
+<div class="info_block">
+  <div class="info_img">
+    <img class="infoimg" src="{% static 'website_images/arrow.png' %}" alt="">
+  </div>
+  <div class="info_container">
+    <h3 class="info_header">{{block.title}}</h3>
+    <div class="info_wrapper">
+      {% for unit in info %}
+      <div class="info_block_small">      
+        {% if unit.title %}<p class="small_header">{{unit.title}}</p> {% endif %}
+        <p class="small_text">
+          {{unit.description|linebreaks}}
+        </p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endfor %}
+
+<script src="{% static 'contactApp/contact.js' %}">
+
+</script>
+
+{% endblock %}

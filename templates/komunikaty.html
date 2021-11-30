@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'mainMap/komunikaty.css'%}">
+<h1 class="komunikaty-title">Punkt Odrzańskiej Informacji Turystycznej</h1>
+<div class="container">
+  {% for item in komunikaty %}
+  {% for line in item %}
+  {% if forloop.counter == 1 %}
+  <div class="title-div">
+    <h3 class="title">{{line}}</h3>
+  </div>
+  {% elif forloop.counter == 2 %}
+  <div class="date-div">
+    <p class="date">{{line}}</p>
+  </div>
+
+  {% else %}
+  <p class="text">{{line}}</p>
+  {% endif %}
+
+  {% endfor %}
+  <div class="divider"></div>
+  {% endfor %}
+</div>
+
+
+{% endblock %}

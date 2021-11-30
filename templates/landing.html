@@ -1,0 +1,53 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'mainMap/landing.css' %}">
+<div class="outter">
+<div class="slider">
+  <div class="slide slide1"></div>
+  <div class="slide slide2"></div>
+  <div class="slide slide3"></div>
+  <div class="slide slide4"></div>
+  <div class="slide slide1"></div>
+</div>
+</div>
+
+
+<a class="to non-blur" href="{% url 'mainMap:map'%}">
+<div class="hello-container blur">
+<p class="non-blur">Punkt Odrzańskiej Informacji Turystycznej</p>
+<img class="app_logo non-blur" src="{% static 'website_images/logo_iodra.png'%}" alt="">
+  <div class="more non-blur">
+    <img src="{% static 'website_images/arrow.png'%}" alt="" class="rotate non-blur">
+    <p class="non-blur">ROZPOCZNIJ</p>
+    <img src="{% static 'website_images/arrow.png'%}" alt="" class="non-blur">
+  </div>
+</div>
+</a>
+<a href="https://odracentrum.org/">
+  <div class="website-href-container">
+    <img src="{% static 'website_images/logo_oc_transparent.png' %}" alt="">
+    <p>ZOBACZ NAJNOWSZE WYDARZENIA<br><span>W ODRA CENTRUM</span> </p>
+  </div>
+</a>
+
+
+
+<div class="footer">
+  <p class="description">Projekt współfinansowany
+ze środków Gminy Wrocław</p>
+<div class="wroclaw-logo">
+  <img src="{% static 'website_images/logo_wroclaw.jpg'%}" alt="" style="height: 70px; width:auto;">
+</div>
+<div style="display: flex; flex-flow: column; justify-content: center;">
+  <p class="website" style="margin-bottom: 10px;">www.wrocław.pl</p>
+  <img src="{% static 'website_images/wroclaw_logo.png' %}" alt="" style="width: 250px; height: 25px; margin: 0 auto;">
+</div>
+
+<div class="odra-centrum-logo">
+  <img src="{% static 'website_images/onwater_logo.png'%}" alt="" style="height: 50px; width:auto; margin-right: 50px;">
+
+  <img src="{% static 'website_images/logo_odra_centrum.png'%}" alt="" style="height: 60px; width:auto; margin-top: -10px;">
+
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/0.0.2/barba.min.js" charset="utf-8"></script>

@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'mainMap/mapChunk.css' %}">
+<div class="head">
+  <a href="{% url 'mainMap:map' %}" class="return-a">
+    <div class="return">
+      <img src="{% static 'website_images/back_arrow.png'%}" alt="">
+      <p>Powrót do mapy</p>
+    </div>
+  </a>
+
+  <form class="form-inline nav-form buttonInside" method="POST" action="{% url 'mainMap:search' %}">
+    {% csrf_token %}
+    <input type="hidden" name="slug" value="{{chunk.slug}}">
+    <input class="nav-input" placeholder="Wyszukaj miejsce" name="input">
+    <button class="nav-button" type="submit">
+      <img src="{% static 'website_images/search_icon.png'%}" alt="">
+    </button>
+  </form>
+</div>
+<h3 class="mapChunkTitle">Punkt Odrzańskiej Informacji Turystycznej</h3>
+<div class="parent" style="background-image: url('{{chunk.image.url}}'); background-position: center; background-repeat: no-repeat;">
+
+</div>
+
+<!-- strzałki do przechodzenia pomiędzy chunkami -->
+
+{% if next %}
+<a href="{{next.get_absolute_url}}">
+  <div class="arrow-left">
+    <img src="{% static 'website_images/right_arrow.png'%}" alt="">
+    <p>{{next.part}}</p>
+  </div>
+</a>
+{% endif %}
+{% if prev %}
+<a href="{{prev.get_absolute_url}}">
+  <div class="arrow-right">
+      <img src="{% static 'website_images/left_arrow.png'%}" alt="">
+      <p>{{prev.part}}</p>
+  </div>
+</a>
+{% endif %}
+
+
+<!-- renderowanie śluz iterując po query -->
+
+{% for lock in locks %}
+<div class="sluza" data="{{lock.slug}}" style="position: absolute; left: {{lock.x_pos}}px; top: {{lock.y_pos}}px; background-color: {% if lock.state %}#4A8500{% else %}#852000{% endif %}">
+Ś
+</div>
+{% endfor %}
+
+<!-- renderowanie marin iterując po query -->
+
+{% for marina in marinas %}
+<div class="marina" data="{{marina.slug}}" style="position: absolute; left: {{marina.x_pos}}px; top: {{marina.y_pos}}px; background-color: {% if marina.state %}#011C40{% else %}#852000{% endif %}">
+M
+</div>
+{% endfor %}
+
+<!-- renderowanie jazow iterując po query -->
+
+{% for weir in weirs %}
+<div class="jaz" data="{{weir.slug}}" style="position: absolute; left: {{weir.x_pos}}px; top: {{weir.y_pos}}px; background-color: {% if weir.state %}#4A8500{% else %}#852000{% endif %}">
+J
+</div>
+{% endfor %}
+
+
+<div class="info blur">
+
+</div>
+<!-- ORYGINAŁ, DO EWENTUALNEJ ZMIANY DESIGNU ODKOMENTOWAĆ-->
+
+<!-- <div class="info blur">
+  <div class="info-sub non-blur">
+    <div class="left non-blur">
+      <div class="inline-chunk">
+        <span id="marina-filter" class="marina-checkbox checkbox"><p>M</p></span>
+        <p class="object_title">ŚLUZA MIESZCZAŃSKA</p>
+      </div>
+      <div class="object_image" style="width: 80%; height: 100%; margin: 20px auto; background-position: center center; background-image: url('{% static 'website_images/pobrane.jpg'%}'); background-repeat: no-repeat; background-size: cover;">
+
+      </div>
+    </div>
+    <div class="right non-blur">
+      <p class="object_info1">
+        252,3 km Odry południowej
+        Wrocławski Szlak Śródmiejski </p>
+      <p class="object_info2">
+        długość – 42,8m
+        szerokość – 5,3m
+        piętrzenie - 5,65m
+      </p>
+      <p class="object_info3">Nr tel.: 502-331-251
+  Otwarta pon.: 06:30 - 14:00
+  pozostałe dni tygodnia i święta 06:30-21:30</p>
+    </div>
+  </div>
+  <p class="info4 non-blur">
+    Odległość do następnego stopnia – Śluz Rędzin, wynosi 8,3 km,
+    do poprzedniej na szlaku Śluzy Piaskowej wynosi 0,6 km
+  </p>
+</div> -->
+
+<div class="filters">
+  <p class="filters-header">Filtruj:</p>
+  <div class="filters-content">
+    <div class="filter-unit">
+      <span id="lock-filter" class="lock-checkbox checkbox"><p>Ś</p></span>
+      <p class="label">Śluzy</p>
+    </div>
+    <div class="filter-unit">
+      <span id="marina-filter" class="marina-checkbox checkbox"><p>M</p></span>
+      <p class="label">Mariny</p>
+    </div>
+    <div class="filter-unit">
+      <span id="weir-filter" class="weir-checkbox checkbox"><p>J</p></span>
+      <p class="label">Jazy</p>
+    </div>
+  </div>
+</div>
+<div class="scale-div">
+  <p>Wybrany odcinek:</p>
+  <p>{{chunk.part}}</p>
+</div>
+
+<script type="text/javascript" src="{% static 'mainMap/mapChunk.js'%}">
+
+</script>
+
+{% endblock %}

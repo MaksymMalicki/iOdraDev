@@ -1,0 +1,79 @@
+.contact-title{
+  font-size: 30px;
+  font-family: Bahnschrift;
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.info_block{
+  margin-left: 100px;
+  width: 1300px;
+  background-color: #7492ad;
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  margin-top: 50px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.info_wrapper{
+  display: none;
+  margin-top: 30px;
+}
+
+.info_img{
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+.info_img img{
+  width: 62px;
+  height: 49px;
+  cursor: pointer;
+  -moz-transition: transform 0.5s;
+  -webkit-transition: transform 0.5s;
+  transition: transform 0.5s;
+}
+
+.flip{
+  transform: rotate(-180deg);
+}
+
+.info_container{
+  margin: 50px 0;
+  margin-left: 30px;
+  margin-bottom: 50px;
+}
+
+.info_header{
+  font-family: Roboto;
+  color: white;
+  font-size: 40px;
+  margin: 0;
+}
+
+.none{
+  display: none;
+}
+
+.text{
+  font-family: Roboto;
+  font-size: 26px;
+  color: white;
+  margin-bottom: 50px;
+
+}
+
+.info_block_small{
+  color: white;
+  font-family: Roboto;
+  font-size: 26px;
+}
+
+.small_header{
+  font-weight: bold;
+  font-weight: bold;
+}

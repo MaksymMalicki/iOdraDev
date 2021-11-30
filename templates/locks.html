@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'mainMap/locks.css' %}">
+
+<h1 class="header">Punkt Odrzańskiej Informacji Turystycznej</h1>
+
+<div class="table-div">
+  <table>
+    <tr>
+      <th class="top left bottom right">Nazwa stopnia wodnego</th>
+      <th class="top bottom right ">Kilometr Odry</th>
+      <th class="top bottom right">Numer telefonu</th>
+      <th class="top right bottom right">Status śluzy</th>
+    </tr>
+    {% for lock in locks %}
+    <tr>
+      <td class="name left bottom right">{{lock.nazwa_stopnia_wodnego}}</td>
+      <td class="kilometer bottom right">{{lock.km_odry}}</td>
+      <td class="phone bottom right">{{lock.nr_tel}}</td>
+      <td class="state right bottom">{{lock.status_sluzy}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+{% endblock %}
