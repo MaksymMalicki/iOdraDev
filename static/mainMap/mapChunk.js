@@ -171,3 +171,12 @@ $('#weir-filter').click(function(){
       $("#weir-filter p").hide()
     }
 })
+
+
+// $("html").click(function(e){
+//   var parentOffset = $(this).offset(); 
+//   var relX = e.pageX - parentOffset.left;
+//   var relY = e.pageY - parentOffset.top;
+//   var res = relX.toString() + " " + relY.toString()
+//   window.alert(res);
+// });

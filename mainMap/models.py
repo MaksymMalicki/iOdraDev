@@ -15,11 +15,17 @@ class Chunk(models.Model):
 
     def __str__(self):
         return self.part
+
     def save(self, *args, **kwargs):
         self.slug=slugify(self.part)
+        self.x_pos = self.x_pos - math.floor(self.width/2)
+        self.y_pos = self.y_pos - math.floor(self.height/2)
+        self.slug=slugify(self.part)
         super(Chunk, self).save(*args, **kwargs)
+
     def get_absolute_url(self):
         return reverse('mainMap:chunk', kwargs={'slug':self.slug})
+        
     def imageURL(self):
         try:
             url = self.image.url
