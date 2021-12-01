@@ -21,12 +21,14 @@ body::-webkit-scrollbar {
     display: none;  /* Safari and Chrome */
 }
 
+/* navbar */
+
 .navbar {
   list-style-type: none;
   margin: 0;
   padding: 0;
   width: 300px;
-  height: 350px;
+  height: 400px;
   position: absolute;
   top: 50px;
   right: 60px;
@@ -52,4 +54,41 @@ body::-webkit-scrollbar {
 
 .navbar-li a:hover {
   color: white;
+}
+
+/* footer */
+.footer{
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+
+.wroclaw-logo{
+  width: 71px;
+  height: 70px;
+  background-color: yellow;
+  margin-left: 30px;
+}
+
+.description, .website{
+  font-size: 20px;
+  font-family: Bahnschrift;
+  width: 260px;
+  margin-left: 100px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.odra-centrum-logo{
+  margin-left: 600px;
+  width: 100px;
+  height: 50px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
 }

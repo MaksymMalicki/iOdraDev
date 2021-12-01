@@ -12,6 +12,7 @@
   </head>
   <body>
   <ul class="navbar">
+    <li class="navbar-li map-nav"><a href="{% url 'mainMap:landing' %}">STRONA GŁÓWNA</a></li>
     <li class="navbar-li map-nav"><a href="{% url 'mainMap:map' %}">MAPA</a></li>
     <li class="navbar-li komunikaty-nav"><a href="{% url 'mainMap:komunikaty' %}">KOMUNIKATY</a></li>
     <li class="navbar-li water_safety-nav"><a href="{% url 'mainMap:water_safety' %}">BEZPIECZENSTWO</a></li>
@@ -21,6 +22,24 @@
 
   {% block content %}
   {% endblock %}
+  <div class="footer">
+    <p class="description">Projekt współfinansowany
+  ze środków Gminy Wrocław</p>
+  <div class="wroclaw-logo">
+    <img src="{% static 'website_images/logo_wroclaw.jpg'%}" alt="" style="height: 70px; width:auto;">
+  </div>
+  <div style="display: flex; flex-flow: column; justify-content: center;">
+    <p class="website" style="margin-bottom: 10px;">www.wrocław.pl</p>
+    <img src="{% static 'website_images/wroclaw_logo.png' %}" alt="" style="width: 250px; height: 25px; margin: 0 auto;">
+  </div>
+  
+  <div class="odra-centrum-logo">
+    <img src="{% static 'website_images/onwater_logo.png'%}" alt="" style="height: 50px; width:auto; margin-right: 50px;">
+  
+    <img src="{% static 'website_images/logo_odra_centrum.png'%}" alt="" style="height: 60px; width:auto; margin-top: -10px;">
+  
+  </div>
+  </div>
   <script type="text/javascript" src="{% static 'script.js' %}"></script>
   </body>
 </html>
