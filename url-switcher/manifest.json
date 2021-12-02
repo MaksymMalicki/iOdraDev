@@ -1,0 +1,12 @@
+{
+    "name" : "url-switcher",
+    "description": "Tool to toggle between two urls",
+    "manifest_version": 2,
+    "version": "1.0",
+    "content_scripts": [
+        {
+            "matches": ["https://odracentrum.org/*"],
+            "js": ["OdraCentrum-redirect.js"]
+        }
+    ]
+}
