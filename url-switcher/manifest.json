@@ -6,7 +6,8 @@
     "content_scripts": [
         {
             "matches": ["https://odracentrum.org/*"],
-            "js": ["OdraCentrum-redirect.js"]
+            "js": ["OdraCentrum-redirect.js"],
+            "css":[]
         }
     ]
 }
