@@ -29,3 +29,8 @@ function setWait(){
 redirectAfterIdle()
 setWait()
 
+document.getElementsByClassName('facebook')[0].href="";
+document.getElementsByClassName('instagram')[0].href="";
+document.getElementsByClassName('email')[0].href="";
+
+
